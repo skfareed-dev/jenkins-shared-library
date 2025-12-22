@@ -1,3 +1,6 @@
-def call() { stage('Build') { 
-    echo "Building application..." sh 'mvn clean package -DskipTests'
-     } }
+def call(steps) {
+    steps.stage('Build') {
+        steps.echo "Building application..."
+        steps.sh 'npm install'
+    }
+}

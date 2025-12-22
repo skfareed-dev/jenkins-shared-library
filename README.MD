@@ -1,0 +1,2 @@
+“We created a Jenkins Shared Library where all common CI/CD stages like build, test, Sonar scan, Docker build, push, and Slack notification are written once and reused across projects.
+Each application Jenkinsfile only calls these shared functions, which reduced duplication and made pipelines easy to maintain.”
