@@ -1,0 +1,1 @@
+def call() { stage('Sonar Scan') { withSonarQubeEnv('sonar-server') { sh 'mvn sonar:sonar' } } }

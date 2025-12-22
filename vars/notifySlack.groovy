@@ -1,0 +1,1 @@
+def call(String status) { slackSend( channel: '#ci-cd', message: "Build ${status}: ${env.JOB_NAME} #${env.BUILD_NUMBER}" ) }

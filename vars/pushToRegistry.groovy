@@ -1,0 +1,1 @@
+def call(String imageName) { stage('Push Image') { sh """ docker tag ${imageName}:${BUILD_NUMBER} repo/${imageName}:${BUILD_NUMBER} docker push repo/${imageName}:${BUILD_NUMBER} """ } }
