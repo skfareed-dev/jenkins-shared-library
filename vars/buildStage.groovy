@@ -1,5 +1,6 @@
-def call(steps) {
-    steps.stage('Build') {
-        steps.echo "Build handled inside Dockerfile"
+def call(steps, moduleName, dockerTag) {
+    steps.stage("Build Docker Image: ${moduleName}") {
+        steps.echo "Building ${moduleName} Docker image..."
+        steps.sh "docker build -t ${moduleName}:${dockerTag} ${moduleName}"
     }
 }
